@@ -1,0 +1,84 @@
+// Upper corner color display
+// Set to fill
+glBegin(GL_QUADS);
+    glColor3f(r, g, b);
+    glVertex2i(770, 560);
+    glVertex2i(790, 560);
+    glVertex2i(790, 590);
+    glVertex2i(770, 590);
+glEnd();
+
+
+CCoord * vertexOne, * vertexTwo;
+
+CShape * redSlider = new CRect();
+vertexOne = new CCoord(25, 15);
+vertexTwo = new CCoord(35, 35);
+redSlider->insertVertex(vertexOne);
+redSlider->insertVertex(vertexTwo);
+redSlider->draw();
+
+CShape * greenSlider = new CRect();
+vertexOne = new CCoord(25, 65);
+vertexTwo = new CCoord(35, 85);
+
+
+// Draw red color line
+glBegin(GL_QUADS);
+    glColor3f(0.0f, g, b);
+    glVertex2i(30, 20);
+    glVertex2i(30, 30);
+    glColor3f(1.0f, g, b);
+    glVertex2i(270, 20);
+    glVertex2i(270, 30);
+glEnd();
+
+// Draw red slider box
+glBegin(GL_QUADS);
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex2i(25, 15);
+    glVertex2i(25, 35);
+    glVertex2i(35, 35);
+    glVertex2i(35, 15);
+glEnd();
+
+
+// Draw green color line
+glBegin(GL_QUADS);
+    glColor3f(r, 0.0f, b);
+    glVertex2i(30, 70);
+    glVertex2i(30, 80);
+    glColor3f(r, 1.0f, b);
+    glVertex2i(270, 70);
+    glVertex2i(270, 80);
+glEnd();
+
+// Draw green slider box
+glBegin(GL_QUADS);
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glVertex2i(25, 65);
+    glVertex2i(25, 85);
+    glVertex2i(35, 85);
+    glVertex2i(35, 65);
+glEnd();
+
+
+// Draw blue color line
+glBegin(GL_QUADS);
+    glColor3f(r, g, 0.0f);
+    glVertex2i(30, 120);
+    glVertex2i(30, 130);
+    glColor3f(r, g, 1.0f);
+    glVertex2i(270, 120);
+    glVertex2i(270, 130);
+glEnd();
+
+// Draw blue slider box
+glBegin(GL_QUADS);
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex2i(25, 115);
+    glVertex2i(25, 135);
+    glVertex2i(35, 135);
+    glVertex2i(35, 115);
+glEnd();
+
